@@ -21,12 +21,12 @@ SELECT
 FROM orders o
 JOIN order_details od ON o.order_id = od.order_id
 GROUP BY ship_country)
-
+<br>
 SELECT 
-	ship_country, 
-	total_revenue,
-	DENSE_RANK() OVER(
-		ORDER BY total_revenue DESC) AS rank
+    ship_country, 
+    total_revenue,
+    DENSE_RANK() OVER(
+       ORDER BY total_revenue DESC) AS rank
 FROM revenue_tab;
 </details>
 
