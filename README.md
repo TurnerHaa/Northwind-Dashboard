@@ -11,25 +11,28 @@ This [GitHub repo]([url](https://github.com/pthom/northwind_psql/tree/master)) c
 ## Step 2: Data transformation and analysis
 Once inside the database, I used SQL scripts to join the data based on the Northwind schema and transform the data and used CTEs and window functions to explore top-level trends like ranking countries by revenue or calculating average order value.
 
+```markdown
 <details>
-<summary>Example</summary>
-```SQL
-WITH revenue_tab AS(
-SELECT 
-    ship_country,
-    ROUND(SUM((unit_price * quantity * (1 - discount))::numeric),2) AS total_revenue
-FROM orders o
-JOIN order_details od ON o.order_id = od.order_id
-GROUP BY ship_country)
+<summary>Example Query</summary>
 
+```sql
+WITH revenue_tab AS (
+    SELECT 
+        ship_country,
+        ROUND(SUM((unit_price * quantity * (1 - discount))::numeric), 2) AS total_revenue
+    FROM orders o
+    JOIN order_details od 
+        ON o.order_id = od.order_id
+    GROUP BY ship_country
+)
 SELECT 
-	ship_country, 
-	total_revenue,
-	DENSE_RANK() OVER(
-		ORDER BY total_revenue DESC) AS rank
+    ship_country, 
+    total_revenue,
+    DENSE_RANK() OVER(
+        ORDER BY total_revenue DESC
+    ) AS rank
 FROM revenue_tab;
-```
-</details>
+</details> ```
 
 ## Step 3: Dashboard development
 I connected PowerBI to the database and used DAX expressions to write measures for critical KPIs like average order value (AOV) and YoY change in revenue, profits and orders. 
