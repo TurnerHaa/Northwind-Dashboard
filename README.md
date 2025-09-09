@@ -13,7 +13,21 @@ Once inside the database, I used SQL scripts to join the data based on the North
 
 <details>
 <summary>Example</summary>
-<pre>$ This dropdown contains<br>a code block!</pre>
+<pre>WITH revenue_tab AS(
+SELECT 
+    ship_country,
+    ROUND(SUM((unit_price * quantity * (1 - discount))::numeric),2) AS total_revenue
+FROM orders o
+JOIN order_details od ON o.order_id = od.order_id
+GROUP BY ship_country)
+
+SELECT 
+	ship_country, 
+	total_revenue,
+	DENSE_RANK() OVER(
+		ORDER BY total_revenue DESC) AS rank
+FROM revenue_tab;
+
 </details>
 
 ## Step 3: Dashboard development
