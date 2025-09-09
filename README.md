@@ -49,4 +49,7 @@ Design focuses on delivering clear, summary insights at a glance. It included:
 + Developing a colour palette and logo
 + Building custom visualizations in R
 
-<img width="300" height="168" alt="1-Sales" src="https://github.com/user-attachments/assets/edb9e44d-6a5c-4f41-8699-d7fea6ffc857" /> <img width="300" height="168" alt="2-Inventory" src="https://github.com/user-attachments/assets/2d0ff7de-ba63-4154-af90-6d40e8aea9ad" /> <img width="300" height="168" alt="3-Dashboards" src="https://github.com/user-attachments/assets/f4c56f30-26a8-4ec3-b51f-a0d18170d9fd" /> <img width="300" height="168" alt="4-Customers" src="https://github.com/user-attachments/assets/8af70748-0511-42ec-b3f7-4a357bd962a3" />
+<img width="1287" height="716" alt="1-Sales" src="https://github.com/user-attachments/assets/f8939ba8-d9a2-4eb9-9c47-325c2ba2c784" />
+<img width="1282" height="717" alt="2-Inventory" src="https://github.com/user-attachments/assets/0ad0fbdd-c1e6-49b4-8918-d51427122160" />
+<img width="1277" height="712" alt="3-Operations" src="https://github.com/user-attachments/assets/92a487d5-e2f9-4f0f-b9ca-b79598633747" />
+<img width="1280" height="715" alt="4-Customers" src="https://github.com/user-attachments/assets/becd44aa-5e29-44e6-9b61-3ab32778c85b" />
