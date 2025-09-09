@@ -13,7 +13,6 @@ Once inside the database, I used SQL scripts to join the data based on the North
 
 <details>
 <summary>Example</summary>
-<pre>$ 
 ```SQL
 WITH revenue_tab AS(
 SELECT 
@@ -30,8 +29,6 @@ SELECT
 		ORDER BY total_revenue DESC) AS rank
 FROM revenue_tab;
 ```
-
-</pre>
 </details>
 
 ## Step 3: Dashboard development
