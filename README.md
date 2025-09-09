@@ -5,7 +5,7 @@ It combines PowerBI, PostgreSQL, GitBash and R to create succinct insights on th
 
 <img width="1281" height="720" alt="Dashboard homepage" src="https://github.com/user-attachments/assets/c10114fa-31ca-4f5b-8501-83e38b949c5b" />
 
-## Step 1: Setup in Postgres and using GitBash
+## Step 1: Setup Postgres database
 This [GitHub repo]([url](https://github.com/pthom/northwind_psql/tree/master)) contains the raw data for hosting Northwind on a PostgresSQL database. Using GitBash and PgAdmin, I could extract, transform and load the data into a locally hosted database.
 
 ## Step 2: Data transformation and analysis
