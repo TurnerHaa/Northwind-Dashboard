@@ -12,7 +12,7 @@ This [GitHub repo]([url](https://github.com/pthom/northwind_psql/tree/master)) c
 Once inside the database, I used SQL scripts to join the data based on the Northwind schema and transform the data and used CTEs and window functions to explore top-level trends like ranking countries by revenue or calculating average order value.
 
 <details>
-<summary>Example - Rank countries by revenue</summary>
+<summary>SQL example - Rank countries by revenue</summary>
 <pre>
 WITH revenue_tab AS(
 SELECT 
@@ -31,7 +31,7 @@ FROM revenue_tab;
 </details>
 
 <details>
-<summary>Example - Calculate average order value</summary>
+<summary>SQL example - Calculate average order value</summary>
 <pre>
 SELECT 
     ROUND(AVG(total_revenuel), 2) AS average_order_value
